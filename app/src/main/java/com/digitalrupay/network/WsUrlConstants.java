@@ -86,7 +86,7 @@ public class WsUrlConstants {
 //    public static String baseEmployeeUrl = "http://ganeshcabletv62.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://srisairamacabletv63.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://sriramacabletv64.digitalrupay.com/webservices/";
-//      public static String baseEmployeeUrl = "http://sscboradband70.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://sscboradband70.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://rajucablenetwork67.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://citycablenetwork68.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://venkatadrihills69.digitalrupay.com/webservices/";
@@ -95,20 +95,20 @@ public class WsUrlConstants {
 
 //    public static String baseEmployeeUrl = "http://ganeshstartvnetwork58.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://cablebilling.digitalrupay.com/webservices/";
-    public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
+//      public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://broadband.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://aptdemo.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://cabledemo1.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://sadha.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://rainbowvisions59.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://svrstartv60.digitalrupay.com/webservices/";
-//    public static String baseEmployeeUrl = "http://navyacablenetwork84.digitalrupay.com/webservices/";
-//     public static String baseEmployeeUrl = "http://newsaichitradarshini71.digitalrupay.com/webservices/";
-//     public static String baseEmployeeUrl = "http://srimanikantacable72.digitalrupay.com/webservices/";
-//       public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
-//     public static String baseEmployeeUrl = "http://kalyanientertainer74.digitalrupay.com/webservices/";
-//     public static String baseEmployeeUrl = "http://ssvcablenetwork75.digitalrupay.com/webservices/";
-//     public static String baseEmployeeUrl = "http://fusion.digitalrupay.com/webservices/";
+    public static String baseEmployeeUrl = "http://navyacablenetwork84.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://newsaichitradarshini71.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://srimanikantacable72.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://kalyanientertainer74.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://ssvcablenetwork75.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://fusion.digitalrupay.com/webservices/";
 
     public static String employeeLoginUrl = baseEmployeeUrl + "emp_services.php?email=" + EMAIL + "&pwd=" + PASSWORD;
     public static String customerListUrl = baseEmployeeUrl + "emp_customers.php?emp_id=" + EMPLOYEE_ID;
