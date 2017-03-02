@@ -324,21 +324,21 @@ public class PaymentsActivity extends BaseActivity implements AsyncRequest.OnAsy
     protected void onResume() {
         super.onResume();
         DigitalRupayApplication.getInstance().setConnectivityListener(this);
-        try {
-            if (isConnected) {
-                Intent intent=new Intent(PaymentsActivity.this, PaymentService.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startService(intent);
-                Intent intent2=new Intent(PaymentsActivity.this, ComplaintService.class);
-                intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startService(intent2);
-                Intent intent1=new Intent(PaymentsActivity.this, UpdateComplaint.class);
-                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startService(intent1);
-            }
-        }catch (Exception e){
-
-        }
+//        try {
+//            if (isConnected) {
+//                Intent intent=new Intent(PaymentsActivity.this, PaymentService.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startService(intent);
+//                Intent intent2=new Intent(PaymentsActivity.this, ComplaintService.class);
+//                intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startService(intent2);
+//                Intent intent1=new Intent(PaymentsActivity.this, UpdateComplaint.class);
+//                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startService(intent1);
+//            }
+//        }catch (Exception e){
+//
+//        }
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -254,17 +254,17 @@ public class BaseActivity extends AppCompatActivity implements ConnectivityRecei
         super.onResume();
         try {
             DigitalRupayApplication.getInstance().setConnectivityListener(this);
-//            if (isConnected) {
-//                Intent intent=new Intent(BaseActivity.this, PaymentService.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startService(intent);
-//                Intent intent2=new Intent(BaseActivity.this, ComplaintService.class);
-//                intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startService(intent2);
-//                Intent intent1=new Intent(BaseActivity.this, UpdateComplaint.class);
-//                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startService(intent1);
-//            }
+            if (isConnected) {
+                Intent intent=new Intent(BaseActivity.this, PaymentService.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startService(intent);
+                Intent intent2=new Intent(BaseActivity.this, ComplaintService.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startService(intent2);
+                Intent intent1=new Intent(BaseActivity.this, UpdateComplaint.class);
+                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startService(intent1);
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
