@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -93,11 +94,11 @@ public class PaymentSuccessActivity extends BaseActivity {
                     int i3 = c1.getColumnIndex("total_outstaning");
                     total_outstaning = c1.getString(i3);
                     int i4=c1.getColumnIndex("SERVICE_MOBILE_NUMBER");
-                    SERVICE_MOBILE_NUMBER=c1.getColumnName(i4);
+                    SERVICE_MOBILE_NUMBER=c1.getString(i4);
                     int i5=c1.getColumnIndex("SERVICES_name");
-                    SERVICES_name=c1.getColumnName(i5);
+                    SERVICES_name=c1.getString(i5);
                     int i6=c1.getColumnIndex("address1");
-                    Adderss=c1.getColumnName(i6);
+                    Adderss=c1.getString(i6);
 
                 } while (c1.moveToNext());
             }

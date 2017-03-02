@@ -376,12 +376,13 @@ public class LoginActivity extends BaseActivity implements AsyncRequest.OnAsyncR
                                 complaintsDataModelArrayList.add(complaintsDataModel);
                             }
                         }
-                        String message = customersObj.getString("message");
-                        String text = customersObj.getString("text");
                         database.execSQL("Create table if not exists ComplaintsData(cust_id varchar(20),first_name varchar(20),last_name varchar(20),addr1 varchar(20),addr2 varchar(20),mobile_no varchar(20),email_id varchar(50),custom_customer_no varchar(20)," +
                                 "remarks varchar(500),complaint_id varchar(20),comp_ticketno varchar(20),comp_cat varchar(20)," +
                                 "complaint varchar(20),comp_status varchar(20),created_by varchar(20),created_date varchar(20),last_edited_by varchar(20),comp_remarks varchar(20))");
-                        ArrayList<CategoryDataModel> categoryDataModelArrayList = SessionData.getCategoriesList();
+                        String message = customersObj.getString("message");
+                        String text = customersObj.getString("text");
+                        if (message.equalsIgnoreCase("success")) {
+                            ArrayList<CategoryDataModel> categoryDataModelArrayList = SessionData.getCategoriesList();
                             if (categoryDataModelArrayList.size() > 0 && complaintsDataModelArrayList.size() > 0) {
 
                                 ArrayList<ComplaintsDataModel> dummyList = new ArrayList<>();
@@ -421,13 +422,14 @@ public class LoginActivity extends BaseActivity implements AsyncRequest.OnAsyncR
                                                 "'"+Email_id+"','"+Custom_customer_no+"','"+Remarks+"','"+complaint_id+"','"+comp_ticketno+"','"+comp_cat+"'," +
                                                 "'"+complaint+"','"+comp_status+"','"+created_by+"','"+created_date+"','"+last_edited_by+"','"+comp_remarks+"')");
                                     }
+                                    SessionData.setComplaintsDataModelArrayList(complaintsDataModelArrayList);
                                 }
-                            SessionData.setComplaintsDataModelArrayList(complaintsDataModelArrayList);
-                                database.execSQL("create table if not exists sendPayment(temp_invoice varchar(20),custId varchar(20),employeeId varchar(20),amount varchar(20),trxnType varchar(20),chequeNumber varchar(20),bankName varchar(20),branchName varchar(20),date varchar(20),checkSend BOOL)");
-                                database.execSQL("create table if not exists updateComplaintUrl(COMPLAINT_ID varchar(20),EMPLOYEE_ID varchar(20),REMARKS varchar(100),COMPLAINT_STATUS varchar(20), sendStats BOOL)");
-                                database.execSQL("create table if not exists sendComplaint(employeeId varchar(20),complaintID varchar(20),custId varchar(20),complaintMsg varchar(500),category varchar(20),isSendComplaint BOOL)");
-                                redirectToCableBillingActivity(employeeDataModel.getEmp_id());
                         }
+                        }
+                        database.execSQL("create table if not exists sendPayment(temp_invoice varchar(20),custId varchar(20),employeeId varchar(20),amount varchar(20),trxnType varchar(20),chequeNumber varchar(20),bankName varchar(20),branchName varchar(20),date varchar(20),checkSend BOOL)");
+                        database.execSQL("create table if not exists updateComplaintUrl(COMPLAINT_ID varchar(20),EMPLOYEE_ID varchar(20),REMARKS varchar(100),COMPLAINT_STATUS varchar(20), sendStats BOOL)");
+                        database.execSQL("create table if not exists sendComplaint(employeeId varchar(20),complaintID varchar(20),custId varchar(20),complaintMsg varchar(500),category varchar(20),isSendComplaint BOOL)");
+                        redirectToCableBillingActivity(employeeDataModel.getEmp_id());
                     }
 
                 } catch (JSONException e) {
