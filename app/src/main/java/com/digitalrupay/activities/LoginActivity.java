@@ -191,8 +191,7 @@ public class LoginActivity extends BaseActivity implements AsyncRequest.OnAsyncR
                         }
                         if (message.equalsIgnoreCase("success")) {
                             JsonReader jsonReader = new JsonReader(new InputStreamReader(new ByteArrayInputStream(response.toString().getBytes())));
-                            Type dataListType = new TypeToken<HashMap<String, LoginResultModel>>() {
-                            }.getType();
+                            Type dataListType = new TypeToken<HashMap<String, LoginResultModel>>() {}.getType();
                             GsonBuilder gsonBuilder = new GsonBuilder();
                             Gson gson = gsonBuilder.create();
                             HashMap<String, LoginResultModel> loginResponse = (HashMap<String, LoginResultModel>) gson.fromJson(jsonReader, dataListType);
@@ -267,7 +266,6 @@ public class LoginActivity extends BaseActivity implements AsyncRequest.OnAsyncR
                     }
                     else if(serviceRequest==6){
                         try {
-
                             JSONObject customersObj = new JSONObject(response);
                             ArrayList<CustomerDataModel> listOfCustomers = new ArrayList<CustomerDataModel>();
                             CustomerDataModel customerDataModel;
@@ -370,8 +368,7 @@ public class LoginActivity extends BaseActivity implements AsyncRequest.OnAsyncR
                         while (keys.hasNext()) {
                             String key = keys.next();
                             if (!key.equalsIgnoreCase("message") && !key.equalsIgnoreCase("text")) {
-                                complaintsDataModel = new Gson().fromJson(customersObj.getJSONObject(key).toString(),
-                                        new TypeToken<ComplaintsDataModel>() {
+                                complaintsDataModel = new Gson().fromJson(customersObj.getJSONObject(key).toString(),new TypeToken<ComplaintsDataModel>() {
                                         }.getType());
                                 complaintsDataModelArrayList.add(complaintsDataModel);
                             }
