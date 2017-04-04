@@ -92,10 +92,12 @@ public class WsUrlConstants {
 //    public static String baseEmployeeUrl = "http://venkatadrihills69.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://pandurangacable65.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://bwcablenetwork66.digitalrupay.com/webservices/";
-
+//    public static String baseEmployeeUrl = "http://svcn.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://svrstartv60.digitalrupay.com/webservices/";
+      public static String baseEmployeeUrl = "http://vanasthalivision78.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://ganeshstartvnetwork58.digitalrupay.com/webservices/";
-    public static String baseEmployeeUrl = "http://cablebilling.digitalrupay.com/webservices/";
-//      public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://cablebilling.digitalrupay.com/webservices/";
+//    public static String baseEmployeeUrl = "http://srcommunications73.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://broadband.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://aptdemo.digitalrupay.com/webservices/";
 //    public static String baseEmployeeUrl = "http://cabledemo1.digitalrupay.com/webservices/";
